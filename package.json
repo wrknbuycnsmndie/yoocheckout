@@ -1,7 +1,7 @@
 {
-    "name": "@a2seven/yoo-checkout",
-    "version": "1.1.4",
-    "description": "Yoo.Checkout API v3",
+    "name": "@wrknbuycnsmndie/yoo-checkout",
+    "version": "1.1.5",
+    "description": "Yoo.Checkout API v3 (i forked that from @a2seven/yoo-checkout to keep deps updated)",
     "main": "build/public-api.js",
     "types": "build/public-api.d.ts",
     "files": [
@@ -21,15 +21,15 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/a2seven/yoocheckout.git"
+        "url": "git+https://github.com/wrknbuycnsmndie/yoocheckout.git"
     },
     "engines": {
         "node": ">=12"
     },
-    "author": "A2Seven <hello@a2seven.com> (https://a2seven.com/)",
+    "author": "wkrnbuycnsmndie <a_chapala@mail.ru> (https://worknbuyconsumendie.tech/)",
     "license": "MIT",
     "scripts": {
-        "serve": "npm run lint && tsc-watch -p tsconfig.json --onSuccess 'node build/index.js'",
+        "serve": "npm run lint && tsc-watch -p tsconfig.json --onSuccess 'node build/core/index.js'",
         "build": "rm -rf build/* && npm run lint && tsc -p ./",
         "lint": "npx tslint --project tsconfig.json --config tslint.json",
         "test:unit": "mocha -r ts-node/register tests/**/*.spec.ts",
@@ -55,7 +55,7 @@
         "uuid": "^8.3.2"
     },
     "bugs": {
-        "url": "https://github.com/a2seven/yoocheckout/issues"
+        "url": "https://github.com/wrknbuycnsmndie/yoocheckout/issues"
     },
-    "homepage": "https://github.com/a2seven/yoocheckout#readme"
+    "homepage": "https://github.com/wrknbuycnsmndie/yoocheckout#readme"
 }
