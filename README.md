@@ -1,9 +1,8 @@
 # Yoo.Checkout API SDK (unofficial)
 
-[![A@SEVEN](https://i.ibb.co/my3rNCm/logo1.png)](https://a2seven.com/)
-[![npm version](https://img.shields.io/npm/v/@a2seven/yoo-checkout.svg)](npmjs.com/package/@a2seven/yoo-checkout)
-[![license](https://img.shields.io/npm/l/@a2seven/yoo-checkout.svg)](npmjs.com/package/@a2seven/yoo-checkout)
-[![npm version](https://img.shields.io/badge/Support%20us-A2Seven-41B883.svg)](https://a2seven.com/)
+[![npm version](https://img.shields.io/npm/v/@wrknbuycnsmndie/yoo-checkout.svg)](npmjs.com/package/@wrknbuycnsmndie/yoo-checkout)
+[![license](https://img.shields.io/npm/l/@wrknbuycnsmndie/yoo-checkout.svg)](npmjs.com/package/@wrknbuycnsmndie/yoo-checkout)
+[![npm version](https://img.shields.io/badge/I`m%20also%20here-41B883.svg)](https://worknbuyconsumendie.tech/)
 [README](README.ru.md) на русском!
 
 [Yoo.Checkout](https://yookassa.ru/) - a universal solution for working with online payments. The Yoo.Checkout API is built on REST-principles, works with real objects and has predictable behavior. Using this API, you can send payment requests, save payment information for repeated charges (and include auto payments), make refunds and much more.

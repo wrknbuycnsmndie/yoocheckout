@@ -1,9 +1,8 @@
 # Yoo.Checkout API SDK (неофициальная)
 
-[![A@SEVEN](https://i.ibb.co/my3rNCm/logo1.png)](https://a2seven.com/)
-[![npm version](https://img.shields.io/npm/v/@a2seven/yoo-checkout.svg)](npmjs.com/package/@a2seven/yoo-checkout)
-[![license](https://img.shields.io/npm/l/@a2seven/yoo-checkout.svg)](npmjs.com/package/@a2seven/yoo-checkout)
-[![npm version](https://img.shields.io/badge/Support%20us-A2Seven-41B883.svg)](https://a2seven.com/)
+[![npm version](https://img.shields.io/npm/v/@wrknbuycnsmndie/yoo-checkout.svg)](npmjs.com/package/@wrknbuycnsmndie/yoo-checkout)
+[![license](https://img.shields.io/npm/l/@wrknbuycnsmndie/yoo-checkout.svg)](npmjs.com/package/@wrknbuycnsmndie/yoo-checkout)
+[![npm version](https://img.shields.io/badge/I`m%20also%20here-41B883.svg)](https://worknbuyconsumendie.tech/)
 
 [README](README.md) in English
 
