@@ -89,12 +89,12 @@ ErrorResponse {
 [YooKassa API page](https://yookassa.ru/developers/api#intro)
 ## Installation
 ```bash
-npm install @a2seven/yoo-checkout
+npm install @wrknbuycnsmdie/yoo-checkout
 ```
 ## Getting started
  
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout'; // OR const { YooCheckout } = require('@a2seven/yoo-checkout');
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout'; // OR const { YooCheckout } = require('@wrknbuycnsmdie/yoo-checkout');
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 ```
@@ -103,7 +103,7 @@ const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secre
 ### [Create payment](https://yookassa.ru/developers/api#create_payment)
 
 ```javascript
-import { YooCheckout, ICreatePayment  } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreatePayment  } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -133,7 +133,7 @@ try {
 ### [Get payment](https://yookassa.ru/developers/api#get_payment)
 
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout';
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -148,7 +148,7 @@ try {
 ```
 ### [Capture payment](https://yookassa.ru/developers/api#capture_payment)
 ```javascript
-import { YooCheckout, ICapturePayment } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICapturePayment } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -173,7 +173,7 @@ try {
  
 ### [Cancel payment](https://yookassa.ru/developers/api#cancel_payment)
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout';
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -190,7 +190,7 @@ try {
 ```
 ### [Get payment list](https://yookassa.ru/developers/api#get_payments_list)
 ```javascript
-import { YooCheckout, IGetPaymentList } from '@a2seven/yoo-checkout';
+import { YooCheckout, IGetPaymentList } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -205,7 +205,7 @@ try {
 ```
 ### [Create refund](https://yookassa.ru/developers/api#create_refund)
 ```javascript
-import { YooCheckout, ICreateRefund } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreateRefund } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -229,7 +229,7 @@ try {
 
 ### [Get refund](https://yookassa.ru/developers/api#get_refund)
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout';
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -245,7 +245,7 @@ try {
 
 ### [Get refund list](https://yookassa.ru/developers/api#get_refunds_list)
 ```javascript
-import { YooCheckout, IGetRefundList } from '@a2seven/yoo-checkout';
+import { YooCheckout, IGetRefundList } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -261,7 +261,7 @@ try {
 
 ### [Create receipt](https://yookassa.ru/developers/api#create_receipt)
 ```javascript
-import { YooCheckout, ICreateReceipt } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreateReceipt } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -306,7 +306,7 @@ try {
 
 ### [Get receipt](https://yookassa.ru/developers/api#get_receipt)
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout';
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -322,7 +322,7 @@ try {
 
 ### [Get receipt list](https://yookassa.ru/developers/api#get_receipts_list)
 ```javascript
-import { YooCheckout, IGetReceiptList } from '@a2seven/yoo-checkout';
+import { YooCheckout, IGetReceiptList } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey' });
 
@@ -340,7 +340,7 @@ try {
 
 ### [Create webhook](https://yookassa.ru/developers/api#create_webhook)
 ```javascript
-import { YooCheckout, ICreateWebHook } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreateWebHook } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey', token: 'your_OAuth_token' });
 
@@ -360,7 +360,7 @@ try {
 
 ### [Get webhook list](https://yookassa.ru/developers/api#get_webhook_list)
 ```javascript
-import { YooCheckout } from '@a2seven/yoo-checkout';
+import { YooCheckout } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey', token: 'your_OAuth_token' });
 try {
@@ -373,7 +373,7 @@ try {
 
 ### [Delete webhook](https://yookassa.ru/developers/api#delete_webhook)
 ```javascript
-import { YooCheckout, ICreateWebHook } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreateWebHook } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey', token: 'your_OAuth_token' });
 
@@ -388,7 +388,7 @@ try {
 
 ### [Get shop info](https://yookassa.ru/developers/api#get_me)
 ```javascript
-import { YooCheckout, ICreateWebHook } from '@a2seven/yoo-checkout';
+import { YooCheckout, ICreateWebHook } from '@wrknbuycnsmdie/yoo-checkout';
 
 const checkout = new YooCheckout({ shopId: 'your_shopId', secretKey: 'your_secretKey', token: 'your_OAuth_token' });
 
