@@ -1,6 +1,6 @@
 {
     "name": "@wrknbuycnsmndie/yoo-checkout",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "Yoo.Checkout API v3 (i forked that from @a2seven/yoo-checkout to keep deps updated)",
     "main": "build/public-api.js",
     "types": "build/public-api.d.ts",
