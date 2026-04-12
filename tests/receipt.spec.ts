@@ -1,7 +1,6 @@
-import 'mocha';
-import { expect } from 'chai';
+import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import MockAdapter from 'axios-mock-adapter';
-import { v4 as uuid } from 'uuid';
+import { v7 as uuid } from 'uuid';
 import axios from 'axios';
 
 import { YooCheckout } from '../lib/core/yoo-checkout.core';
@@ -22,96 +21,89 @@ describe('Test Receipt functionality', () => {
     describe('Tests for creating receipt', () => {
         let mockHttp: MockAdapter;
 
-        before(() => {
+        beforeAll(() => {
             mockHttp = new MockAdapter(axios);
             mockHttp.onPost(mockHost, createReceiptData).reply(200, createReceiptResponse);
         });
 
-        after(() => {
+        afterAll(() => {
             mockHttp.restore();
         });
 
 
         describe('Creating receipt', () => {
-            it('should success create new receipt', done => {
-                instance.createReceipt(createReceiptData, uuid()).then((data: Receipt) => {
-                    expect(data).to.be.an('object');
-                    expect(data).to.have.property('id');
-                    expect(data).to.have.property('refund_id');
-                    expect(data).to.have.property('type');
-                    expect(data).to.have.property('status');
-                    expect(data).to.have.property('items');
-                    expect(data).to.have.property('settlements');
-                    expect(data).to.have.property('tax_system_code');
-                    expect(data.status).to.equal('succeeded');
-                    expect(data.items).to.have.length(createReceiptData.items.length);
-                    expect(data.settlements).to.have.length(createReceiptData.settlements.length);
-                    expect(data.tax_system_code).to.equal(1);
-                    expect(data.refund_id).to.equal(createReceiptData.refund_id);
-                    expect(data.type).to.equal(createReceiptResponse.type);
-
-                    done();
-                });
+            it('should success create new receipt', async () => {
+                const data: Receipt = await instance.createReceipt(createReceiptData, uuid());
+                expect(data).toBeTypeOf('object');
+                expect(data).toHaveProperty('id');
+                expect(data).toHaveProperty('refund_id');
+                expect(data).toHaveProperty('type');
+                expect(data).toHaveProperty('status');
+                expect(data).toHaveProperty('items');
+                expect(data).toHaveProperty('settlements');
+                expect(data).toHaveProperty('tax_system_code');
+                expect(data.status).toBe('succeeded');
+                expect(data.items).toHaveLength(createReceiptData.items.length);
+                expect(data.settlements).toHaveLength(createReceiptData.settlements.length);
+                expect(data.tax_system_code).toBe(1);
+                expect(data.refund_id).toBe(createReceiptData.refund_id);
+                expect(data.type).toBe(createReceiptResponse.type);
             });
         });
     });
 
     describe('Tests for get information about receipt', () => {
         let mockHttp: MockAdapter;
-        let id = uuid();
-        before(() => {
+        const id = uuid();
+        beforeAll(() => {
             mockHttp = new MockAdapter(axios);
             mockHttp.onGet(`${mockHost}/${id}`).reply(200, getReceiptResponse);
         });
 
-        after(() => {
+        afterAll(() => {
             mockHttp.restore();
         });
 
         describe('Get info about receipt', () => {
-            it('should return information about receipt', done => {
-                instance.getReceipt(id).then((data: Receipt) => {
-                    expect(data).to.be.an('object');
-                    expect(data).to.have.property('id');
-                    expect(data).to.have.property('type');
-                    expect(data).to.have.property('status');
-                    expect(data).to.have.property('payment_id');
-                    expect(data).to.have.property('fiscal_document_number');
-                    expect(data).to.have.property('fiscal_storage_number');
-                    expect(data).to.have.property('fiscal_attribute');
-                    expect(data).to.have.property('registered_at');
-                    expect(data).to.have.property('fiscal_provider_id');
-                    expect(data).to.have.property('items');
-                    expect(data).to.have.property('tax_system_code');
-                    expect(data).to.have.property('settlements');
-                    done();
-                });
+            it('should return information about receipt', async () => {
+                const data: Receipt = await instance.getReceipt(id);
+                expect(data).toBeTypeOf('object');
+                expect(data).toHaveProperty('id');
+                expect(data).toHaveProperty('type');
+                expect(data).toHaveProperty('status');
+                expect(data).toHaveProperty('payment_id');
+                expect(data).toHaveProperty('fiscal_document_number');
+                expect(data).toHaveProperty('fiscal_storage_number');
+                expect(data).toHaveProperty('fiscal_attribute');
+                expect(data).toHaveProperty('registered_at');
+                expect(data).toHaveProperty('fiscal_provider_id');
+                expect(data).toHaveProperty('items');
+                expect(data).toHaveProperty('tax_system_code');
+                expect(data).toHaveProperty('settlements');
             });
         });
     });
 
     describe('Tests for get receipt list', () => {
         let mockHttp: MockAdapter;
-        before(() => {
+        beforeAll(() => {
             mockHttp = new MockAdapter(axios);
             mockHttp.onGet(mockHost).reply(200, getReceiptListResponse);
         });
 
-        after(() => {
+        afterAll(() => {
             mockHttp.restore();
         });
 
         describe('Get receipt list', () => {
-            it('should return receipt list', done => {
-                instance.getReceiptList({}).then((data: IReceiptList) => {
-                    expect(data).to.be.an('object');
-                    expect(data).to.have.property('type');
-                    expect(data).to.have.property('items');
-                    expect(data).to.have.property('next_cursor');
-                    expect(data.items).to.have.length(1);
-                    expect(data.items).to.deep.include(receiptFactory(getReceiptListResponse.items[0]));
-                    done();
-                });
+            it('should return receipt list', async () => {
+                const data: IReceiptList = await instance.getReceiptList({});
+                expect(data).toBeTypeOf('object');
+                expect(data).toHaveProperty('type');
+                expect(data).toHaveProperty('items');
+                expect(data).toHaveProperty('next_cursor');
+                expect(data.items).toHaveLength(1);
+                expect(data.items).toContainEqual(receiptFactory(getReceiptListResponse.items[0]));
             });
         });
     });

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { v4 as uuid } from 'uuid';
+import { v7 as uuid } from 'uuid';
 import {
     errorFactory,
     Payment,
@@ -62,7 +62,7 @@ export class YooCheckout {
     }
 
     private normalizeFilter(filters: any) {
-        if(!Boolean(filters)) {
+        if(!filters) {
             return {};
         }
 
@@ -377,7 +377,7 @@ export class YooCheckout {
      * wh-edba6d49-ce3e-4d99-991b-4bb164859dc3
      * @returns {Promise<Object>}
      */
-    public async deleteWebHook(id: string): Promise<{}> {
+    public async deleteWebHook(id: string): Promise<object> {
         try {
             if (!this.options.token) {
                 throw errorFactory({
